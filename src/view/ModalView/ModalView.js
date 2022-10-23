@@ -1,4 +1,6 @@
+import { render, RenderPosition } from '../../utils/render';
 import AbstractView from '../AbstractView';
+import PopupOkView from '../PopupOkView/PopupOkView';
 
 function createModal() {
   return (
@@ -91,6 +93,12 @@ class ModalView extends AbstractView {
     const isNoRequiredFields = this.#checkRequiredFields(values);
 
     if (isNoRequiredFields) {
+      const main = document.querySelector('.main');
+      const PopupOk = new PopupOkView('Your message successfully sent');
+
+      render(main, PopupOk, RenderPosition.AFTERBEGIN);
+      PopupOk.removeAfterFiveSeconds();
+
       this.#onCloseModal();
     }
   };

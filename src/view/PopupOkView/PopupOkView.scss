@@ -1,0 +1,13 @@
+.popup-ok-view {
+  position: fixed;
+  left: 50%;
+  top: 10px;
+  z-index: 20;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
+  font-family: 'Gilroy';
+  color: $color-blue-01;
+  background-color: $color-white;
+  transform: translate(-50%);
+}
