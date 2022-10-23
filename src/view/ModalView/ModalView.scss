@@ -1,0 +1,71 @@
+.modal-view {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 20;
+  border-radius: 10px;
+  padding: 56px;
+  width: 540px;
+  height: 800px;
+  box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
+  font-family: 'Gilroy';
+  background-color: $color-white;
+  transform: translate(-50%, -50%);
+
+  &__close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    border: none;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    background-color: $color-white;
+    cursor: pointer;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__title {
+    margin-bottom: 48px;
+    font-size: 20px;
+    line-height: 1.5;
+    color: $color-blue-01;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.04em;
+    color: $color-blue-01;
+    opacity: 0.8;
+  }
+
+  &__textarea {
+    margin-bottom: 72px;
+    height: 144px;
+    resize: none;
+  }
+
+  &__input,
+  &__textarea {
+    margin-top: 8px;
+    margin-bottom: 32px;
+    border: 1px solid #356ead;
+    border-radius: 10px;
+    padding: 21px 42px;
+    opacity: 0.4;
+  }
+
+  &__error-field {
+    border: 2px solid #ff0000;
+  }
+}

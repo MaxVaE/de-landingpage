@@ -30,12 +30,12 @@ class CardsView extends AbstractView {
   }
 
   renderCards = () => {
-    const cardsSelector = this.element.querySelector('.cards-view__items');
+    const cardsElement = this.element.querySelector('.cards-view__items');
 
     this.#cards.forEach((card) => {
       const Card = new CardView(card);
 
-      render(cardsSelector, Card, RenderPosition.BEFOREEND);
+      render(cardsElement, Card, RenderPosition.BEFOREEND);
       Card.renderLink();
     });
   };
