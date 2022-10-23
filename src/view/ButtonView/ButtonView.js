@@ -9,14 +9,16 @@ function createButton(text) {
 }
 
 class ButtonView extends AbstractView {
+  #text = '';
+
   constructor(text) {
     super();
 
-    this.text = text;
+    this.#text = text;
   }
 
   get template() {
-    return createButton(this.text);
+    return createButton(this.#text);
   }
 }
 

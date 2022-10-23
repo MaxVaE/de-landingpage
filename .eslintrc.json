@@ -16,6 +16,7 @@
     "no-duplicate-imports": 2,
     "class-methods-use-this": 0,
     "default-case": 0,
-    "import/no-cycle": 0
+    "import/no-cycle": 0,
+    "no-plusplus": 0
   }
 }

@@ -2,6 +2,7 @@ import { render, RenderPosition } from './utils/render';
 import CardsView from './view/CardsView/CardsView';
 import HeaderView from './view/HeaderView/HeaderView';
 import HeroBlockView from './view/HeroBlockView/HeroBlockView';
+import BelovedClientView from './view/BelovedClientView/BelovedClientView';
 
 const cards = [
   {
@@ -35,3 +36,7 @@ HeroBlock.renderButton();
 const Cards = new CardsView(cards);
 render(main, Cards, RenderPosition.BEFOREEND);
 Cards.renderCards();
+
+const BelovedClient = new BelovedClientView();
+render(main, BelovedClient, RenderPosition.BEFOREEND);
+BelovedClient.renderTable();

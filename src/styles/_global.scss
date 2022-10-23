@@ -2,9 +2,13 @@ body {
   margin: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .layout {
-  max-width: 1200px;
   margin: 0 10px;
+  max-width: 1200px;
 
   @media (min-width: 1200px) {
     margin: 0 auto;
@@ -12,10 +16,21 @@ body {
 }
 
 .inner-layout {
+  margin: 0 10px;
   max-width: 940px;
-  margin: 0px 10px;
 
   @media (min-width: 940px) {
-    margin: 0px auto;
+    margin: 0 auto;
   }
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 500;
+}
+
+p {
+  margin: 0;
 }

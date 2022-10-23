@@ -29,11 +29,10 @@
   }
 
   &__title {
-    margin: 0;
     font-family: 'Galien';
     font-size: 64px;
     line-height: 1.16;
-    color: $color-text;
+    color: $color-blue-01;
   }
 
   &__text {
@@ -43,7 +42,7 @@
     font-family: 'Gilroy';
     font-size: 16px;
     line-height: 1.62;
-    color: $color-text;
+    color: $color-blue-01;
     opacity: 0.6;
   }
 
