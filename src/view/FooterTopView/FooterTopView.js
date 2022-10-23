@@ -1,6 +1,7 @@
-import { replace } from '../../utils/render';
+import { render, replace, RenderPosition } from '../../utils/render';
 import AbstractView from '../AbstractView';
 import ButtonView from '../ButtonView/ButtonView';
+import ModalView from '../ModalView/ModalView';
 
 function createFooterTop() {
   return (
@@ -27,7 +28,16 @@ class FooterTopView extends AbstractView {
     const Button = new ButtonView('Let’s Talk');
     replace(Button, button);
 
+    Button.element.addEventListener('click', this.#onClickOpenModal);
+
     this.#button = Button;
+  };
+
+  #onClickOpenModal = () => {
+    const Modal = new ModalView();
+    const main = document.querySelector('.main');
+
+    render(main, Modal, RenderPosition.BEFOREEND);
   };
 }
 
