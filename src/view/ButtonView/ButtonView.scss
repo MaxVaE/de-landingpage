@@ -7,8 +7,8 @@
   font-family: 'Gilroy';
   font-size: 16px;
   line-height: 1.62;
-  color: #fff;
-  background: #5a98d0;
+  color: $color-white;
+  background: $color-blue-04;
   cursor: pointer;
 
   @include tablet {
