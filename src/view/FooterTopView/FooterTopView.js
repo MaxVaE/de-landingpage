@@ -38,6 +38,8 @@ class FooterTopView extends AbstractView {
     const main = document.querySelector('.main');
 
     render(main, Modal, RenderPosition.BEFOREEND);
+
+    Modal.init();
   };
 }
 

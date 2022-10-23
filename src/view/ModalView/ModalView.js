@@ -6,6 +6,7 @@ function createModal() {
       <button class="modal-view__close">
         <img src="./images/close.svg" alt="close" />
       </button>
+
       <h2 class="modal-view__title">SEND US MESSAGE</h2>
 
       <form name="form" class="modal-view__form">
@@ -28,6 +29,40 @@ class ModalView extends AbstractView {
   get template() {
     return createModal();
   }
+
+  init = () => {
+    const closeButton = this.element.querySelector('.modal-view__close');
+
+    closeButton.addEventListener('click', this.#onCloseModal);
+
+    setTimeout(() => {
+      document.addEventListener('click', this.#onCloseModalOutClick);
+    }, 1);
+
+    document.addEventListener('keydown', this.#onCloseModalESC);
+  };
+
+  #onCloseModal = () => {
+    this.element.remove();
+    document.removeEventListener('click', this.#onCloseModalOutClick);
+    document.removeEventListener('keydown', this.#onCloseModalESC);
+  };
+
+  #onCloseModalOutClick = (e) => {
+    const isModal = e.composedPath().includes(this.element);
+
+    if (!isModal) {
+      this.#onCloseModal();
+    }
+  };
+
+  #onCloseModalESC = (e) => {
+    const isClickedESC = e.keyCode === 27;
+
+    if (isClickedESC) {
+      this.#onCloseModal();
+    }
+  };
 }
 
 export default ModalView;
