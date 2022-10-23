@@ -71,10 +71,15 @@ class ModalView extends AbstractView {
 
   #onKeydownModal = (e) => {
     const isClickedESC = e.keyCode === 27;
-    // const isClickedEnter = e.keyCode === 13;
+    const isClickedEnter = e.keyCode === 13;
 
     if (isClickedESC) {
       this.#onCloseModal();
+    }
+
+    if (isClickedEnter) {
+      const buttonSubmit = this.element.querySelector('[name="submit"]');
+      buttonSubmit.click();
     }
   };
 
