@@ -1,0 +1,15 @@
+.link-view {
+  display: flex;
+  align-items: center;
+  font-family: 'Gilroy';
+  font-size: 14px;
+  line-height: 2.14;
+  color: #5a98d0;
+  cursor: pointer;
+
+  &__image {
+    margin-left: 28px;
+    width: 16px;
+    height: 16px;
+  }
+}
