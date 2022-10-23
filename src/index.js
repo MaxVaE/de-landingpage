@@ -7,6 +7,8 @@ import HeroBlockView from './view/HeroBlockView/HeroBlockView';
 import CardsView from './view/CardsView/CardsView';
 import BelovedClientView from './view/BelovedClientView/BelovedClientView';
 
+import ModalView from './view/ModalView/ModalView';
+
 const cards = [
   {
     src: './images/cards/card-1.svg',
@@ -54,3 +56,6 @@ Cards.renderCards();
 const BelovedClient = new BelovedClientView();
 render(main, BelovedClient, RenderPosition.BEFOREEND);
 BelovedClient.renderTable();
+
+const Modal = new ModalView();
+render(main, Modal, RenderPosition.BEFOREEND);
