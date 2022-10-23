@@ -1,3 +1,8 @@
-@import './global.scss';
+@import 'global';
+@import 'media';
+@import 'variables';
+
+@import '../view/ButtonView/ButtonView.scss';
 
 @import '../view/HeaderView/HeaderView.scss';
+@import '../view/HeroBlockView/HeroBlockView.scss';

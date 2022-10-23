@@ -2,7 +2,7 @@ import AbstractView from '../AbstractView';
 
 function createHeader() {
   return (
-    `<header class="header-view">
+    `<header class="layout header-view">
       <img src="./images/logo.svg" alt="logo" />
 
       <img src="./images/burger.svg" alt="burger" />
