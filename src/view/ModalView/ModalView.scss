@@ -64,4 +64,8 @@
     padding: 21px 42px;
     opacity: 0.4;
   }
+
+  &__error-field {
+    border: 2px solid #ff0000;
+  }
 }
