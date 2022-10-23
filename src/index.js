@@ -9,6 +9,5 @@ const Header = new HeaderView();
 render(body, Header, RenderPosition.AFTERBEGIN);
 
 const HeroBlock = new HeroBlockView();
-render(main, HeroBlock, RenderPosition.AFTERBEGIN);
-
+render(main, HeroBlock, RenderPosition.BEFOREEND);
 HeroBlock.renderButton();
