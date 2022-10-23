@@ -1,0 +1,80 @@
+.footer-bottom-view {
+  padding-top: 96px;
+  padding-bottom: 64px;
+  padding-left: 10px;
+  height: 100%;
+  max-width: 1070px;
+  background-color: $color-blue-02;
+
+  &__contact {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 320px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+
+    h3 {
+      margin-left: 15px;
+      font-size: 28px;
+      line-height: 1.64;
+    }
+  }
+
+  &__info {
+    display: flex;
+    margin-top: 24px;
+
+    span {
+      max-width: 264px;
+      font-size: 16px;
+      line-height: 1.62;
+
+      &:nth-child(2) {
+        margin-left: 16px;
+        opacity: 0.8;
+      }
+    }
+
+    &:nth-child(2) {
+      margin-top: 33px;
+    }
+  }
+
+  &__about-us {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  &__link {
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: 1.62;
+    opacity: 0.8;
+    cursor: pointer;
+
+    &:nth-child(2) {
+      margin-top: 32px;
+    }
+  }
+
+  &__follow-us {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__policy {
+    display: block;
+    margin-top: 64px;
+    font-size: 16px;
+    line-height: 1.62;
+    opacity: 0.4;
+  }
+}

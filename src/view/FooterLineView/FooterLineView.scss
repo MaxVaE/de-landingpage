@@ -1,0 +1,14 @@
+.footer-line-view {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -1px;
+    z-index: -1;
+    border-top: 1px solid $color-white;
+    width: 50%;
+    opacity: 0.4;
+  }
+}

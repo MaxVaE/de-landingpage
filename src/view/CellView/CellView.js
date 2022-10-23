@@ -7,7 +7,7 @@ function createCell(text) {
 }
 
 class CellView extends AbstractView {
-  #text = 0;
+  #text = '';
 
   constructor(text) {
     super();
