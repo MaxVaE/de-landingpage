@@ -34,3 +34,31 @@ h3 {
 p {
   margin: 0;
 }
+
+.footer {
+  position: relative;
+  font-family: 'Gilroy';
+  color: $color-white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 50%;
+    height: 100%;
+    background-color: $color-blue-02;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    z-index: -1;
+    width: 50%;
+    height: 100%;
+    background-color: $color-blue-04;
+  }
+}

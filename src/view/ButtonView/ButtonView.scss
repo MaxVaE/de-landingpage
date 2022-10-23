@@ -11,6 +11,10 @@
   background: $color-blue-04;
   cursor: pointer;
 
+  &:hover {
+    opacity: 0.8;
+  }
+
   @include tablet {
     padding: 15px 48px;
     width: auto;

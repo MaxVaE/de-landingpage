@@ -1,7 +1,10 @@
 import { render, RenderPosition } from './utils/render';
-import CardsView from './view/CardsView/CardsView';
 import HeaderView from './view/HeaderView/HeaderView';
+import FooterTopView from './view/FooterTopView/FooterTopView';
+import FooterLineView from './view/FooterLineView/FooterLineView';
+import FooterBottomView from './view/FooterBottomView/FooterBottomView';
 import HeroBlockView from './view/HeroBlockView/HeroBlockView';
+import CardsView from './view/CardsView/CardsView';
 import BelovedClientView from './view/BelovedClientView/BelovedClientView';
 
 const cards = [
@@ -25,9 +28,20 @@ const cards = [
 
 const body = document.querySelector('.body');
 const main = document.querySelector('.main');
+const footer = document.querySelector('.footer');
 
 const Header = new HeaderView();
 render(body, Header, RenderPosition.AFTERBEGIN);
+
+const FooterTop = new FooterTopView();
+render(footer, FooterTop, RenderPosition.BEFOREEND);
+FooterTop.renderButton();
+
+const FooterLine = new FooterLineView();
+render(footer, FooterLine, RenderPosition.BEFOREEND);
+
+const FooterBottom = new FooterBottomView();
+render(footer, FooterBottom, RenderPosition.BEFOREEND);
 
 const HeroBlock = new HeroBlockView();
 render(main, HeroBlock, RenderPosition.BEFOREEND);

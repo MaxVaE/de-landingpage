@@ -1,0 +1,46 @@
+.footer-top-view {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0 200px 0 0;
+  padding-top: 92px;
+  padding-right: 197px;
+  padding-bottom: 96px;
+  max-width: 1070px;
+  background-color: $color-blue-02;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: calc(100% - 197px);
+    height: 1px;
+    background-color: $color-white;
+    opacity: 0.4;
+  }
+
+  button {
+    margin: auto 0;
+    margin-left: 180px;
+    padding: 15px 75px;
+  }
+
+  &__content {
+    padding-left: 10px;
+  }
+
+  &__title {
+    max-width: 317px;
+    font-size: 36px;
+    line-height: 1.28;
+  }
+
+  &__text {
+    margin-top: 32px;
+    max-width: 460px;
+    font-size: 16px;
+    line-height: 1.62;
+    opacity: 0.6;
+  }
+}
