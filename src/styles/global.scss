@@ -1,0 +1,17 @@
+.body {
+  max-width: 1200px;
+  margin: 40px 10px;
+
+  @media (min-width: 1200px) {
+    margin: 40px auto;
+  }
+}
+
+.main {
+  max-width: 940px;
+  margin: 0px 10px;
+
+  @media (min-width: 940px) {
+    margin: 0px auto;
+  }
+}
