@@ -1,0 +1,63 @@
+.cards-view {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 180px;
+  margin-bottom: 212px;
+
+  &__title {
+    margin: 0;
+    max-width: 358px;
+    font-family: 'Gilroy';
+    font-size: 36px;
+    line-height: 1.28;
+    color: #316099;
+
+    @include tablet-xl {
+      position: absolute;
+    }
+  }
+
+  &__image {
+    margin-top: calc(-48px - 18px);
+    height: 197px;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+
+    .card-view:nth-child(n) {
+      margin-top: 50px;
+    }
+
+    @include tablet-xl {
+      flex-direction: row-reverse;
+      flex-wrap: wrap;
+
+      .card-view:nth-child(odd) {
+        margin-top: 100px;
+        margin-left: 100px;
+      }
+
+      .card-view:nth-child(even) {
+        position: relative;
+        top: calc(158px + 138px);
+        margin-top: 100px;
+      }
+
+      .card-view:first-child {
+        margin-top: 0;
+      }
+
+      .card-view:nth-child(2) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  @include tablet-xl {
+    display: block;
+  }
+}
